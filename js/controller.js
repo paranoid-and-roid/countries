@@ -1,18 +1,7 @@
-app.controller("CountriesCtrl", ["$scope", function($scope) {
+app.controller("CountriesCtrl", ["$scope", "$http", function($scope, $http) {
 
-	$scope.countries = [
-		{
-			name: "China",
-			population: 10887766
-		},
-			{
-			name: "India",
-			population: 348763456
-		},
-		{
-			name: "United States of America",
-			population: 134567923
-		}
-	]
+	$http.get("moreCountries.json").success(function(data) {
+		$scope.countries = data;
+	});
 
 }]);
