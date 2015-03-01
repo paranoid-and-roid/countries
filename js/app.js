@@ -1,1 +1,1 @@
-var app = angular.module("countriesApp" , []);
+var app = angular.module("countriesApp" , ['ngRoute']);
