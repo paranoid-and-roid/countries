@@ -1,0 +1,8 @@
+<ul>
+	<li><h1>{{ country.name }}</h1></li>
+	<li><img src="{{ country.flagURL }}" width="100" /></li>
+	<li>{{ country.capital }}</li>
+	<li>{{ country.population | number }}</li>
+	<li>{{ country.GDP | currency:'&euro;' }}</li>
+
+</ul>
